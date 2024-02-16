@@ -1,0 +1,127 @@
+
+stress-ng: info:  [225082] setting to a 30 secs run per stressor
+stress-ng: info:  [225082] dispatching hogs: 12 zlib
+stress-ng: info:  [225082] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225082] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225082]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225082] zlib               9018     30.12    343.07      0.40       299.40          26.26        95.03          3428
+stress-ng: metrc: [225082] miscellaneous metrics:
+stress-ng: metrc: [225082] zlib                  66.84 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225082] zlib                   1.06 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225082] skipped: 0
+stress-ng: info:  [225082] passed: 12: zlib (12)
+stress-ng: info:  [225082] failed: 0
+stress-ng: info:  [225082] metrics untrustworthy: 0
+stress-ng: info:  [225082] successful run completed in 30.38 secs
+stress-ng: info:  [225158] setting to a 30 secs run per stressor
+stress-ng: info:  [225158] dispatching hogs: 12 zlib
+stress-ng: info:  [225158] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225158] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225158]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225158] zlib              11988     30.10    344.61      0.45       398.24          34.74        95.52          3424
+stress-ng: metrc: [225158] miscellaneous metrics:
+stress-ng: metrc: [225158] zlib                  65.10 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225158] zlib                   1.41 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225158] skipped: 0
+stress-ng: info:  [225158] passed: 12: zlib (12)
+stress-ng: info:  [225158] failed: 0
+stress-ng: info:  [225158] metrics untrustworthy: 0
+stress-ng: info:  [225158] successful run completed in 30.28 secs
+stress-ng: info:  [225230] setting to a 30 secs run per stressor
+stress-ng: info:  [225230] dispatching hogs: 12 zlib
+stress-ng: info:  [225230] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225230] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225230]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225230] zlib              12579     30.14    334.77      0.68       417.35          37.50        92.75          3412
+stress-ng: metrc: [225230] miscellaneous metrics:
+stress-ng: metrc: [225230] zlib                  64.69 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225230] zlib                   1.57 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225230] skipped: 0
+stress-ng: info:  [225230] passed: 12: zlib (12)
+stress-ng: info:  [225230] failed: 0
+stress-ng: info:  [225230] metrics untrustworthy: 0
+stress-ng: info:  [225230] successful run completed in 30.38 secs
+stress-ng: info:  [225311] setting to a 30 secs run per stressor
+stress-ng: info:  [225311] dispatching hogs: 12 zlib
+stress-ng: info:  [225311] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225311] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225311]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225311] zlib              13694     30.09    351.34      0.47       455.11          38.92        97.43          3448
+stress-ng: metrc: [225311] miscellaneous metrics:
+stress-ng: metrc: [225311] zlib                  63.45 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225311] zlib                   1.93 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225311] skipped: 0
+stress-ng: info:  [225311] passed: 12: zlib (12)
+stress-ng: info:  [225311] failed: 0
+stress-ng: info:  [225311] metrics untrustworthy: 0
+stress-ng: info:  [225311] successful run completed in 30.19 secs
+stress-ng: info:  [225411] setting to a 30 secs run per stressor
+stress-ng: info:  [225411] dispatching hogs: 12 zlib
+stress-ng: info:  [225411] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225411] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225411]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225411] zlib              14182     30.10    344.09      0.56       471.12          41.15        95.41          5360
+stress-ng: metrc: [225411] miscellaneous metrics:
+stress-ng: metrc: [225411] zlib                  63.72 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225411] zlib                   2.21 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225411] skipped: 0
+stress-ng: info:  [225411] passed: 12: zlib (12)
+stress-ng: info:  [225411] failed: 0
+stress-ng: info:  [225411] metrics untrustworthy: 0
+stress-ng: info:  [225411] successful run completed in 30.24 secs
+stress-ng: info:  [225529] setting to a 30 secs run per stressor
+stress-ng: info:  [225529] dispatching hogs: 12 zlib
+stress-ng: info:  [225529] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225529] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225529]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225529] zlib              13440     30.10    351.94      0.40       446.49          38.14        97.54          3472
+stress-ng: metrc: [225529] miscellaneous metrics:
+stress-ng: metrc: [225529] zlib                  62.97 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225529] zlib                   2.22 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225529] skipped: 0
+stress-ng: info:  [225529] passed: 12: zlib (12)
+stress-ng: info:  [225529] failed: 0
+stress-ng: info:  [225529] metrics untrustworthy: 0
+stress-ng: info:  [225529] successful run completed in 30.24 secs
+stress-ng: info:  [225585] setting to a 30 secs run per stressor
+stress-ng: info:  [225585] dispatching hogs: 12 zlib
+stress-ng: info:  [225585] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225585] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225585]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225585] zlib              13864     30.13    344.98      0.50       460.21          40.13        95.57          3508
+stress-ng: metrc: [225585] miscellaneous metrics:
+stress-ng: metrc: [225585] zlib                  63.66 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225585] zlib                   2.29 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225585] skipped: 0
+stress-ng: info:  [225585] passed: 12: zlib (12)
+stress-ng: info:  [225585] failed: 0
+stress-ng: info:  [225585] metrics untrustworthy: 0
+stress-ng: info:  [225585] successful run completed in 30.36 secs
+stress-ng: info:  [225662] setting to a 30 secs run per stressor
+stress-ng: info:  [225662] dispatching hogs: 12 zlib
+stress-ng: info:  [225662] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225662] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225662]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225662] zlib              14238     30.10    342.62      0.65       473.08          41.48        95.05          3460
+stress-ng: metrc: [225662] miscellaneous metrics:
+stress-ng: metrc: [225662] zlib                  64.24 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225662] zlib                   2.38 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225662] skipped: 0
+stress-ng: info:  [225662] passed: 12: zlib (12)
+stress-ng: info:  [225662] failed: 0
+stress-ng: info:  [225662] metrics untrustworthy: 0
+stress-ng: info:  [225662] successful run completed in 30.23 secs
+stress-ng: info:  [225728] setting to a 30 secs run per stressor
+stress-ng: info:  [225728] dispatching hogs: 12 zlib
+stress-ng: info:  [225728] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: metrc: [225728] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s CPU used per       RSS Max
+stress-ng: metrc: [225728]                           (secs)    (secs)    (secs)   (real time) (usr+sys time) instance (%)          (KB)
+stress-ng: metrc: [225728] zlib              13267     30.09    340.44      0.60       440.98          38.90        94.47          3636
+stress-ng: metrc: [225728] miscellaneous metrics:
+stress-ng: metrc: [225728] zlib                  65.53 % compression ratio (geometric mean of 12 instances)
+stress-ng: metrc: [225728] zlib                   2.25 MB/sec compression rate (harmonic mean of 12 instances)
+stress-ng: info:  [225728] skipped: 0
+stress-ng: info:  [225728] passed: 12: zlib (12)
+stress-ng: info:  [225728] failed: 0
+stress-ng: info:  [225728] metrics untrustworthy: 0
+stress-ng: info:  [225728] successful run completed in 30.25 secs

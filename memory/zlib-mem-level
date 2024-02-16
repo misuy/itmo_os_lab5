@@ -1,0 +1,17 @@
+#!/bin/bash
+
+timeout=30
+
+echo "mem-level,bogo_ops,cpu_used,comp_ratio,comp_rate" > zlib-mem-level_res
+echo "mem-level,usr,sys,iowait" > zlib-mem-level_cpu_res
+echo "" > zlib-mem-level_tmp
+
+for ((i=1; i<10; i++))
+do
+    echo $i
+
+    sudo mpstat 1 $timeout | grep "all" | sed "s/,/\./g" | awk --assign=cpu="$i" '{printf cpu","$3","$5","$6"\n"}' >> zlib-mem-level_cpu_res &
+
+	sudo stress-ng --zlib 12 --zlib-mem-level $i --metrics --timeout $timeout | tee -a zlib-mem-level_tmp |
+    awk --assign=mem="$i" '{printf mem","$5","$11"\n"}' | head --lines=-8 | tail --lines=+6 >> zlib-mem-level_res
+done

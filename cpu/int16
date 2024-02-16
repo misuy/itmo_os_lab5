@@ -1,0 +1,26 @@
+#!/bin/bash
+
+method="int16"
+timeout=60
+policy_list=("--batch 0" "--fifo 99" "--idle 0" "--other 0" "--rr 99")
+
+echo "cpu's count"
+echo "cpus_count,bogo_ops,cpu_used" > int16_cpu_res
+for ((i=1; i<17; i++))
+do
+	echo $i
+	
+	sudo stress-ng --cpu $i --cpu-method $method --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-5 | tail --lines=+6 >> int16_cpu_res
+done
+
+echo ""
+echo "scheduling policies"
+echo "policy,bogo_ops,cpu_used" > int16_sched_res
+for policy_idx in ${!policy_list[*]}
+do
+	echo $i
+
+	sudo chrt ${policy_list[$policy_idx]} stress-ng --cpu 12 --cpu-method $method --metrics --timeout $timeout |
+	awk --assign=policy="${policy_list[$policy_idx]}" '{printf policy","$5","$11"\n"}' | head --lines=-5 | tail --lines=+6 >> int16_sched_res
+done

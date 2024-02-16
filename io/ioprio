@@ -1,0 +1,18 @@
+#!/bin/bash
+
+timeout=30
+
+echo "cpus_count,bogo_ops,cpu_used" > ioprio_res
+echo "cpus_count,kB_read/s,kB_write/s" > ioprio_io_res
+echo "cpus_count,usr,sys,iowait" > ioprio_cpu_res
+
+for ((i=1; i<17; i++))
+do
+    echo $i
+    sudo iostat 1 $timeout | grep "nvme" | sed "s/,/\./g" | awk --assign=cpu="$i" '{printf cpu","$4","$5"\n"}' >> ioprio_io_res &
+
+    sudo mpstat 1 $timeout | grep "all" | sed "s/,/\./g" | awk --assign=cpu="$i" '{printf cpu","$3","$5","$6"\n"}' >> ioprio_cpu_res &
+
+	sudo stress-ng --ioprio $i --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-5 | tail --lines=+6 >> ioprio_res
+done

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+timeout=30
+
+echo "cpu's count"
+echo "cpus_count,bogo_ops,cpu_used" > l1cache-sets_cpu_res
+for ((i=1; i<17; i++))
+do
+	echo $i 
+	
+	sudo stress-ng --l1cache $i --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-5 | tail --lines=+7 >> l1cache-sets_cpu_res
+done
+
+
+echo ""
+echo "l1cache-sets"
+echo "sets_count,bogo_ops,cpu_used" > l1cache-sets_res
+for ((i=1; i<513; i=i*2))
+do
+	echo $i
+
+	sudo stress-ng --l1cache 12 --l1cache-sets $i --metrics --timeout $timeout |
+	awk --assign=sets="$i" '{printf sets","$5","$11"\n"}' | head --lines=-5 | tail --lines=+7 >> l1cache-sets_res
+done

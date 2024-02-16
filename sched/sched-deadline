@@ -1,0 +1,16 @@
+#!/bin/bash
+
+timeout=30
+
+echo "deadline,bogo_ops,cpu_used" > sched-deadline_res
+echo "deadline,usr,sys,iowait" > sched-deadline_cpu_res
+
+for ((i=100000; i<500000; i=i+20000))
+do
+    echo $i
+
+    sudo mpstat 1 $timeout | grep "all" | sed "s/,/\./g" | awk --assign=cpu="$i" '{printf cpu","$3","$5","$6"\n"}' >> sched-deadline_cpu_res &
+
+    sudo stress-ng --cpu 0 --sched deadline --sched-deadline $i --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-5 | tail --lines=+7 >> sched-deadline_res
+done

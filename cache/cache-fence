@@ -1,0 +1,24 @@
+#!/bin/bash
+
+timeout=30
+
+echo "cpu's count"
+echo "cpus_count,bogo_ops,cpu_used" > cache-fence_without_res
+for ((i=1; i<17; i++))
+do
+    echo $i 
+
+	sudo stress-ng --cache $i --cache-flush --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-9 | tail --lines=+7 >> cache-fence_without_res
+done
+
+echo ""
+echo "fence"
+echo "cpus_count,bogo_ops,cpu_used" > cache-fence_res
+for ((i=1; i<17; i++))
+do
+    echo $i 
+
+	sudo stress-ng --cache $i --cache-fence --cache-flush --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-9 | tail --lines=+7 >> cache-fence_res
+done

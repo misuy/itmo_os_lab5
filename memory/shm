@@ -1,0 +1,23 @@
+#!/bin/bash
+
+timeout=30
+
+echo "cpus_count,bogo_ops,cpu_used" > shm_res
+echo "cpus_count,free" > shm_vm_res
+echo "cpus_count,usr,sys,iowait" > shm_cpu_res
+
+for ((i=1; i<17; i++))
+do
+    echo $i
+    sudo vmstat 1 $timeout | grep -v "memory" | grep -v "cache" | sed "s/,/\./g" | awk --assign=cpu="$i" '{printf cpu","$4"\n"}' >> shm_vm_res &
+    vmpid=$!
+
+    sudo mpstat 1 $timeout | grep "all" | sed "s/,/\./g" | awk --assign=cpu="$i" '{printf cpu","$3","$5","$6"\n"}' >> shm_cpu_res &
+    mppid=$!
+
+	sudo stress-ng --shm $i --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-5 | tail --lines=+6 >> shm_res
+
+    kill $vmpid
+    kill $mppid
+done

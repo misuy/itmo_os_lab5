@@ -1,0 +1,17 @@
+#!/bin/bash
+
+timeout=30
+
+echo "cpus_count,bogo_ops,cpu_used" > netdev_res
+echo "cpus_count,usr,sys,iowait" > netdev_cpu_res
+
+
+for ((i=1; i<17; i++))
+do
+    echo $i
+
+    sudo mpstat 1 $timeout | grep "all" | sed "s/,/\./g" | awk --assign=cpu="$i" '{printf cpu","$3","$5","$6"\n"}' >> netdev_cpu_res &
+
+	sudo stress-ng --netdev $i --metrics --timeout $timeout |
+	awk --assign=cpu="$i" '{printf cpu","$5","$11"\n"}' | head --lines=-5 | tail --lines=+6 >> netdev_res
+done
